@@ -8,7 +8,7 @@ public class WebtechProjektApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(WebtechProjektApplication.class, args);
-		//Test
+
 	}
 
 }
