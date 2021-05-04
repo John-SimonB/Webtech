@@ -1,4 +1,4 @@
-package htw.berlin.WebtechProjekt;
+/*package htw.berlin.WebtechProjekt;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,4 +16,4 @@ public class ToDoRestController {
     public ResponseEntity<CompletedList> getCompletedToDoTasks(){
         return (ResponseEntity<CompletedList>) ResponseEntity.ok();
     }
-}
+}*/
