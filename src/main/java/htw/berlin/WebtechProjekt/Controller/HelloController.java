@@ -1,4 +1,4 @@
-package htw.berlin.WebtechProjekt;
+package htw.berlin.WebtechProjekt.Controller;
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,5 +1,6 @@
-/*package htw.berlin.WebtechProjekt;
+package htw.berlin.WebtechProjekt.Controller;
 
+import htw.berlin.WebtechProjekt.services.ToDoListImpl;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,12 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class ToDoRestController {
 
     @GetMapping(path = "/list")
-    public ResponseEntity<ToDolist> getToDoList(){
-        return (ResponseEntity<ToDolist>) ResponseEntity.ok();
+    public ResponseEntity<ToDoListImpl> List() {
+
+        return ResponseEntity.ok(list);
     }
 
-    @GetMapping(path = "list/completedtasks")
+    /*@GetMapping(path = "list/completedtasks")
     public ResponseEntity<CompletedList> getCompletedToDoTasks(){
         return (ResponseEntity<CompletedList>) ResponseEntity.ok();
-    }
-}*/
+    }*/
+}
