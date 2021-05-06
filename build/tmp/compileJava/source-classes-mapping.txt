@@ -1,4 +1,2 @@
-htw/berlin/WebtechProjekt/HelloController.java
- htw.berlin.WebtechProjekt.HelloController
-htw/berlin/WebtechProjekt/WebtechProjektApplication.java
- htw.berlin.WebtechProjekt.WebtechProjektApplication
+htw/berlin/WebtechProjekt/Controller/HelloController.java
+ htw.berlin.WebtechProjekt.Controller.HelloController
