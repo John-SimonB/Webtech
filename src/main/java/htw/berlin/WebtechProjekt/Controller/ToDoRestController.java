@@ -1,21 +1,34 @@
 package htw.berlin.WebtechProjekt.Controller;
 
-import htw.berlin.WebtechProjekt.services.ToDoListImpl;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
+import htw.berlin.WebtechProjekt.Models.Status;
+import htw.berlin.WebtechProjekt.Models.ToDoListEntity;
+import htw.berlin.WebtechProjekt.Repository.ToDoRepository;
+import htw.berlin.WebtechProjekt.Services.ToDoListService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
 
 @RestController
 public class ToDoRestController {
 
-    @GetMapping(path = "/list")
-    public ResponseEntity<ToDoListImpl> List() {
+    @Autowired
+    private ToDoListService toDoListService;
 
-        return ResponseEntity.ok(list);
+
+    @RequestMapping("/")
+    public String index() {
+        return "Hello World";
     }
 
-    /*@GetMapping(path = "list/completedtasks")
-    public ResponseEntity<CompletedList> getCompletedToDoTasks(){
-        return (ResponseEntity<CompletedList>) ResponseEntity.ok();
-    }*/
+    @RequestMapping("/ToDos")
+    public List<ToDoListEntity> allToDos() {
+        return toDoListService.findAll();
+    }
+
+
 }
