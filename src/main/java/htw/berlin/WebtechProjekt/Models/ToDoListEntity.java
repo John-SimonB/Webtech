@@ -3,27 +3,27 @@ package htw.berlin.WebtechProjekt.Models;
 import javax.persistence.*;
 
 @Entity
-//@Table(name = " ") <- Tabellenname ändern
+@Table(name = "ToDo")
 public class ToDoListEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //Id wird generiert
-    private long id; //final musste weg & 'String' zu 'long' geändert
+    private Long id;
 
-    @Column (nullable = false)//Sagt an: ist eine Spalte in Tabelle, Wert darf nicht null sein
+    @Column (nullable = false) // Wert darf nicht null sein
     private String task;
 
-    @Column //(name = " ") <- Name der Spalte kann so hinzugefügt werden
-    private boolean status;
+    @Column (name ="Status", nullable = false)
+    @Enumerated(value = EnumType.STRING)
+    private Status state;
 
-
-    public ToDoListEntity(long id, String task, boolean status) {
-        this.id = id;
+    public ToDoListEntity(String task, Status status) {
         this.task = task;
-        this.status = status;
+        this.state = state;
     }
 
-    protected ToDoListEntity(){} //Konstruktor
+    protected ToDoListEntity() {
+    }
 
     public long getId() {
         return id;
@@ -33,11 +33,8 @@ public class ToDoListEntity {
         return task;
     }
 
-    public boolean isStatus() {
-        return status;
+    public Status isStatus() {
+        return state;
     }
 
-    public void setStatus(boolean status) {
-        this.status = status;
-    }
 }

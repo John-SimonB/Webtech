@@ -2,18 +2,18 @@ package htw.berlin.WebtechProjekt.Models;
 
 public class ToDoList {
 
-    private final String id;
+    private final long id;
     private final String task;
-    private boolean status;
+    private Status state;
 
 
-    public ToDoList(String id, String task, boolean status) {
+    public ToDoList(long id, String task, Status state) {
         this.id = id;
         this.task = task;
-        this.status = status;
+        this.state = state;
     }
 
-    public String getId() {
+    public long getId() {
         return id;
     }
 
@@ -21,11 +21,11 @@ public class ToDoList {
         return task;
     }
 
-    public boolean isStatus() {
-        return status;
+    public Status isStatus() {
+        return state;
     }
 
-    public void setStatus(boolean status) {
-        this.status = status;
+    public void setStatus(Status state) {
+        this.state = state;
     }
 }
