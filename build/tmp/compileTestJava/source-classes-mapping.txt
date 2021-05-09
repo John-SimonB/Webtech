@@ -1,2 +1,4 @@
 htw/berlin/WebtechProjekt/WebtechProjektApplicationTests.java
- htw.berlin.WebtechProjekt.WebtechProjektApplicationTests
+ htw.berlin.WebtechProjekt.HelloControllerIT
+htw/berlin/WebtechProjekt/HelloControllerTest.java
+ htw.berlin.WebtechProjekt.HelloControllerTest

@@ -13,7 +13,7 @@ public class ToDoListEntity {
     @Column (nullable = false) // Wert darf nicht null sein
     private String task;
 
-    @Column (name ="Status", nullable = false)
+    @Column (name ="Status")
     @Enumerated(value = EnumType.STRING)
     private Status state;
 
@@ -24,8 +24,7 @@ public class ToDoListEntity {
 
     protected ToDoListEntity() {
     }
-
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
