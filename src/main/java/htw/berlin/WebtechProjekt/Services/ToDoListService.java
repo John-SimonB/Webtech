@@ -24,5 +24,10 @@ public class ToDoListService {
         ToDoRepo.save(newToDo);
     }
 
+    public void deleteToDo(String id) {
+        Long ToDoId = Long.parseLong(id);
+        ToDoRepo.deleteById(ToDoId);
+    }
+
 
 }

@@ -12,11 +12,11 @@ import static htw.berlin.WebtechProjekt.Models.Status.offen;
 public class Runner implements CommandLineRunner {
 
     @Autowired
-    private ToDoRepository toDorepository;
+    private ToDoListService toDoListService;
 
     @Override
     public void run(String... args) throws Exception {
-        ToDoListEntity firstTask = new ToDoListEntity("Staubsaugen", offen);
-        toDorepository.save(firstTask);
+        toDoListService.addToDo("Staubsaugen", offen);
+        //toDoListService.deleteToDo("2");
     }
 }
