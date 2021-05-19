@@ -1,7 +1,6 @@
 package htw.berlin.WebtechProjekt.Services;
 
-import htw.berlin.WebtechProjekt.Models.ToDoListEntity;
-import htw.berlin.WebtechProjekt.Repository.ToDoRepository;
+import htw.berlin.WebtechProjekt.Models.Status;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -16,7 +15,7 @@ public class Runner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        toDoListService.addToDo("Staubsaugen", offen);
-        //toDoListService.deleteToDo("2");
+        //toDoListService.deleteAll();
+        //toDoListService.addToDo("Wischen", offen);
     }
 }

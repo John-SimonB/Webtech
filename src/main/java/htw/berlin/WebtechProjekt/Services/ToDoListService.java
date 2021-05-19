@@ -29,5 +29,11 @@ public class ToDoListService {
         ToDoRepo.deleteById(ToDoId);
     }
 
+    public void deleteAll(){
+        ToDoRepo.deleteAll();
+    }
 
+    public void save(ToDoListEntity toDoListEntity) {
+        ToDoRepo.save(toDoListEntity);
+    }
 }
