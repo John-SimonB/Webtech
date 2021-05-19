@@ -6,6 +6,7 @@ import htw.berlin.WebtechProjekt.Repository.ToDoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -19,8 +20,8 @@ public class ToDoListService {
         return ToDos;
     }
 
-    public void addToDo(String task, Status status) {
-        ToDoListEntity newToDo = new ToDoListEntity(task, status);
+    public void addToDo(String task, Status state, LocalDate date) {
+        ToDoListEntity newToDo = new ToDoListEntity(task, state, date);
         ToDoRepo.save(newToDo);
     }
 

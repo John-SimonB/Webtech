@@ -1,6 +1,7 @@
 package htw.berlin.WebtechProjekt.Models;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "ToDo")
@@ -17,13 +18,18 @@ public class ToDoListEntity {
     @Enumerated(value = EnumType.STRING)
     private Status state;
 
-    public ToDoListEntity(String task, Status status) {
+    @Column (name ="Deadline")
+    private LocalDate deadline;
+
+    public ToDoListEntity(String task, Status state, LocalDate deadline) {
         this.task = task;
         this.state = state;
+        this.deadline = deadline;
     }
 
     protected ToDoListEntity() {
     }
+
     public Long getId() {
         return id;
     }
@@ -36,4 +42,7 @@ public class ToDoListEntity {
         return state;
     }
 
+    public LocalDate getDeadline() {
+        return deadline;
+    }
 }
