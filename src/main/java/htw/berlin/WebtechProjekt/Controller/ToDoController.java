@@ -1,5 +1,7 @@
 package htw.berlin.WebtechProjekt.Controller;
 
+import com.sun.xml.bind.v2.TODO;
+import htw.berlin.WebtechProjekt.Models.ToDoListEntity;
 import htw.berlin.WebtechProjekt.Registration.RegistrationRequest;
 import htw.berlin.WebtechProjekt.Services.ToDoListService;
 import htw.berlin.WebtechProjekt.Services.UserService;
@@ -9,6 +11,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+
+import java.util.List;
 
 
 @Controller
@@ -20,11 +24,13 @@ public class ToDoController {
     public ToDoController(UserService userService) {
         this.userService = userService;
     }
+
     @Autowired
     public ToDoListService toDoListService;
 
     @GetMapping(path = "/")
     public String showhome(Model model) {
+        List<ToDoListEntity> todo =toDoListService.findAll();
         model.addAttribute("todos", toDoListService.findAll());
         return "home";
     }
