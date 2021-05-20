@@ -58,7 +58,6 @@ public class ToDoController {
         return "register";
     }
 
-
     @PostMapping(path = "registration")
     public String handleRegistrationRequest(RegistrationRequest registrationRequest) {
         userService.createUser(registrationRequest);
