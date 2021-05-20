@@ -1,9 +1,10 @@
 package htw.berlin.WebtechProjekt.Services;
 
-import htw.berlin.WebtechProjekt.Models.Status;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
 
 import static htw.berlin.WebtechProjekt.Models.Status.offen;
 
@@ -16,6 +17,7 @@ public class Runner implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         //toDoListService.deleteAll();
-        //toDoListService.addToDo("Wischen", offen);
+        //toDoListService.addToDo("Waschen", offen, LocalDate.now());
+        //toDoListService.addToDo("Putzen", offen, LocalDate.now());
     }
 }

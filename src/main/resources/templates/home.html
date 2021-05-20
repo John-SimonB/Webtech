@@ -6,17 +6,18 @@
     <thead>
     <tr>
         <th scope="col">Aufgabe</th>
-        <th scope="col">Status</th>
         <th scope="col">Deadline</th>
+        <th scope="col">Status</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="ToDoListEntity: ${todos}">
         <td th:text="${ToDoListEntity.task}">
-        <td th:text="${ToDoListEntity.state}">
         <td th:text="${ToDoListEntity.deadline}">
     <tr>
     <tbody>
 </table>
 </body>
 </html>
+
+// habe erstmal den Status entfernt, da er nicht funktioniert - er ist irgendwie immer null

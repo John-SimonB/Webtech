@@ -2,8 +2,8 @@ htw/berlin/WebtechProjekt/Controller/ToDoController.java
  htw.berlin.WebtechProjekt.Controller.ToDoController
 htw/berlin/WebtechProjekt/Models/Status.java
  htw.berlin.WebtechProjekt.Models.Status
-htw/berlin/WebtechProjekt/Services/Runner.java
- htw.berlin.WebtechProjekt.Services.Runner
+htw/berlin/WebtechProjekt/Registration/Security/WebSecurityConfig.java
+ htw.berlin.WebtechProjekt.Registration.Security.WebSecurityConfig
 htw/berlin/WebtechProjekt/WebtechProjektApplication.java
  htw.berlin.WebtechProjekt.WebtechProjektApplication
 htw/berlin/WebtechProjekt/Models/ToDoUser.java
@@ -22,7 +22,7 @@ htw/berlin/WebtechProjekt/Models/ToDoListEntity.java
  htw.berlin.WebtechProjekt.Models.ToDoListEntity
 htw/berlin/WebtechProjekt/Registration/Security/PasswordEncoder.java
  htw.berlin.WebtechProjekt.Registration.Security.PasswordEncoder
-htw/berlin/WebtechProjekt/Registration/Security/WebSecurityConfig.java
- htw.berlin.WebtechProjekt.Registration.Security.WebSecurityConfig
 htw/berlin/WebtechProjekt/Registration/RegistrationRequest.java
  htw.berlin.WebtechProjekt.Registration.RegistrationRequest
+htw/berlin/WebtechProjekt/Services/Runner.java
+ htw.berlin.WebtechProjekt.Services.Runner

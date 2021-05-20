@@ -1,9 +1,35 @@
 <!DOCTYPE html>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <html th:replace="~{layout :: layout (~{::body})}">
 <head>
-
 </head>
 <body>
-<h1>Login</h1>
+<div style="width: 100%; margin: 300px auto;">
+<div class="sidenav">
+    <div class="login-main-text">
+        <h2> Melde dich bitte an, oder Registriere dich.</h2>
+    </div>
+</div>
+<div class="main">
+    <div class="col-md-6 col-sm-12">
+        <div class="login-form">
+            <form>
+                <div class="form-group">
+                    <label>Benutzername</label>
+                    <input type="text" class="form-control" placeholder="Benutzername">
+                </div>
+                <div class="form-group">
+                    <label>Passwort</label>
+                    <input type="password" class="form-control" placeholder="Passwort">
+                </div>
+                <button type="submit" class="btn btn-black">Einloggen</button>
+                <button type="submit" class="btn btn-secondary">Registrieren</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
 </body>
 </html>
