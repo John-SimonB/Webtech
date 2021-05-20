@@ -2,6 +2,7 @@ package htw.berlin.WebtechProjekt.Controller;
 
 import com.sun.xml.bind.v2.TODO;
 import htw.berlin.WebtechProjekt.Models.ToDoListEntity;
+import htw.berlin.WebtechProjekt.Models.ToDoUser;
 import htw.berlin.WebtechProjekt.Registration.RegistrationRequest;
 import htw.berlin.WebtechProjekt.Services.ToDoListService;
 import htw.berlin.WebtechProjekt.Services.UserService;
@@ -27,9 +28,10 @@ public class ToDoController {
 
     @Autowired
     public ToDoListService toDoListService;
+    public ToDoUser toDoUser;
 
-    @GetMapping(path = "/")
-    public String showhome(Model model) {
+    @GetMapping(path = "/home")
+    public String showhome(@ModelAttribute Model model) {
         List<ToDoListEntity> todo =toDoListService.findAll();
         model.addAttribute("todos", toDoListService.findAll());
         return "home";
@@ -46,8 +48,10 @@ public class ToDoController {
     }
 
     @GetMapping(path = "/registration")
-    public String showRegistrationPage() {
-        return "Registerpage";
+    public String showRegistrationPage(@ModelAttribute Model model) {
+        userService.createUser(registrationRequest());
+        model.addAttribute("toDoUser", toDoUser);
+        return "register";
     }
 
 
