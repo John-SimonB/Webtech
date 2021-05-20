@@ -1,6 +1,65 @@
 <!DOCTYPE html>
 <html th:replace="~{layout :: layout (~{::body})}">
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
 <body>
 <h1>Register</h1>
+<form class="form-horizontal" method="post" th:action="@{/registration}" th:object="${registrationRequest}">
+    <fieldset>
+
+        <!-- Form Name -->
+        <legend>Register Yourself</legend>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="fname">First Name</label>
+            <div class="col-md-4">
+                <input id="fname" name="fname" type="text" placeholder="" th:field="*{firstName}" class="form-control input-md" required="">
+
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="lname">Last Name</label>
+            <div class="col-md-4">
+                <input id="lname" name="lname" type="text" placeholder="" class="form-control input-md" th:field="*{lastName}" required="">
+
+            </div>
+        </div>
+
+        <!-- Text input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="email">Email</label>
+            <div class="col-md-4">
+                <input id="email" name="email" type="text" placeholder="" class="form-control input-md" th:field="*{email}" required="">
+
+            </div>
+        </div>
+
+        <!-- Password input-->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="password">Password</label>
+            <div class="col-md-4">
+                <input id="password" name="password" type="password" placeholder="" class="form-control input-md" th:field="*{password}" required="">
+
+            </div>
+        </div>
+
+        <!-- Button (Double) -->
+        <div class="form-group">
+            <label class="col-md-4 control-label" for="save"></label>
+            <div class="col-md-8">
+                <button id="save" name="save" class="btn btn-success">Register</button>
+                <button id="clear" name="clear" class="btn btn-danger">Reset</button>
+            </div>
+        </div>
+
+    </fieldset>
+</form>
+
 </body>
 </html>
