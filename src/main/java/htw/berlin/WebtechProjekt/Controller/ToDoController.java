@@ -4,6 +4,7 @@ import com.sun.xml.bind.v2.TODO;
 import htw.berlin.WebtechProjekt.Models.ToDoListEntity;
 import htw.berlin.WebtechProjekt.Models.ToDoUser;
 import htw.berlin.WebtechProjekt.Registration.RegistrationRequest;
+import htw.berlin.WebtechProjekt.Repository.ToDoRepository;
 import htw.berlin.WebtechProjekt.Services.ToDoListService;
 import htw.berlin.WebtechProjekt.Services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,16 +30,19 @@ public class ToDoController {
     @Autowired
     public ToDoListService toDoListService;
     public ToDoUser toDoUser;
+    public ToDoRepository toDoRepository;
 
-    @GetMapping(path = "/home")
-    public String showhome(@ModelAttribute Model model) {
+    @GetMapping(path = "/")
+    public String showhome(Model model) {
         List<ToDoListEntity> todo =toDoListService.findAll();
         model.addAttribute("todos", toDoListService.findAll());
         return "home";
     }
 
     @GetMapping(path = "/createtodo")
-    public String showcreatetodo(Model model) {
+    public String showcreatetodo(@ModelAttribute Model model, ToDoListEntity toDoListEntity) {
+        toDoRepository.save(toDoListEntity);
+        model.addAttribute("todo", toDoListEntity);
         return "createtodo";
     }
 

@@ -32,10 +32,9 @@ public class UserService implements UserDetailsService {
         userRepository.save(toDoUser);
     }
 
-    // '(UserDetails)' nicht im Original
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return (UserDetails) userRepository
+        return userRepository
                 .findByEmail(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User with name '" + username + "' not found."));
     }
