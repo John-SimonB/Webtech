@@ -1,13 +1,12 @@
 package htw.berlin.WebtechProjekt.Controller;
 
-import com.sun.xml.bind.v2.TODO;
 import htw.berlin.WebtechProjekt.Models.ToDoListEntity;
 import htw.berlin.WebtechProjekt.Models.ToDoUser;
-import htw.berlin.WebtechProjekt.Registration.RegistrationRequest;
 import htw.berlin.WebtechProjekt.Repository.ToDoRepository;
+import htw.berlin.WebtechProjekt.Repository.UserRepository;
 import htw.berlin.WebtechProjekt.Services.ToDoListService;
-import htw.berlin.WebtechProjekt.Services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -20,17 +19,12 @@ import java.util.List;
 @Controller
 public class ToDoController {
 
-    private final UserService userService;
-
-
-    public ToDoController(UserService userService) {
-        this.userService = userService;
-    }
-
     @Autowired
     public ToDoListService toDoListService;
-    public ToDoUser toDoUser;
+    @Autowired
     public ToDoRepository toDoRepository;
+    @Autowired
+    public UserRepository userRepository;
 
     @GetMapping(path = "/")
     public String showhome(Model model) {
@@ -47,25 +41,31 @@ public class ToDoController {
     }
 
     @GetMapping(path = "/login")
-    public String showlogin(Model model) {
+    public String showlogin() {
         return "login";
     }
 
     @GetMapping(path = "/registration")
-    public String showRegistrationPage(@ModelAttribute Model model) {
-        userService.createUser(registrationRequest());
-        model.addAttribute("toDoUser", toDoUser);
+    public String showRegistrationPage(Model model) {
+        //userService.createUser(registrationRequest());
+        model.addAttribute("toDoUser", new ToDoUser());
         return "register";
     }
 
-    @PostMapping(path = "registration")
-    public String handleRegistrationRequest(RegistrationRequest registrationRequest) {
-        userService.createUser(registrationRequest);
-        return  "?registrationSuccessful";
+    @PostMapping(path = "/registration_process")
+    public String handleRegistrationRequest(ToDoUser toDoUser) {
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+        String encodedPassword = passwordEncoder.encode(toDoUser.getPassword());
+        toDoUser.setPassword(encodedPassword);
+        userRepository.save(toDoUser);
+        return  "registrationSuccessful";
     }
 
-    @ModelAttribute(name = "registrationRequest")
-    public RegistrationRequest registrationRequest() {
-        return new RegistrationRequest();
+    @GetMapping("/list_users")
+    public String viewUserList(Model model) {
+        List<ToDoUser> listUsers = userRepository.findAll();
+        model.addAttribute("listUsers", listUsers);
+        return "userlist";
     }
+
 }
