@@ -20,7 +20,7 @@ public class ToDoListService {
         return ToDos;
     }
 
-    public void addToDo(String task, Status state, LocalDate date) {
+    public void addToDo(String task, Boolean state, LocalDate date) {
         ToDoListEntity newToDo = new ToDoListEntity(task, state, date);
         ToDoRepo.save(newToDo);
     }
