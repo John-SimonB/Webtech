@@ -7,7 +7,8 @@
 </head>
 <body>
 <h1>Register</h1>
-<form class="form-horizontal" method="post" th:action="@{/registration}" th:object="${registrationRequest}">
+<form th:action="@{/registration_process}" th:object="${toDoUser}"
+      method="post" style="max-width: 600px; margin: 0 auto;">
     <fieldset>
 
         <!-- Form Name -->
@@ -17,7 +18,8 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="fname">First Name</label>
             <div class="col-md-4">
-                <input id="fname" name="fname" type="text" placeholder="" th:field="*{firstName}" class="form-control input-md" required="">
+                <input id="fname" name="fname" type="text" placeholder="" th:field="*{firstName}" class="form-control input-md" required
+                       minlength="3" maxlength="20">
 
             </div>
         </div>
@@ -26,7 +28,8 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="lname">Last Name</label>
             <div class="col-md-4">
-                <input id="lname" name="lname" type="text" placeholder="" class="form-control input-md" th:field="*{lastName}" required="">
+                <input id="lname" name="lname" type="text" placeholder="" class="form-control input-md" th:field="*{lastName}" required
+                       minlength="3" maxlength="20">
 
             </div>
         </div>
@@ -35,7 +38,8 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="email">Email</label>
             <div class="col-md-4">
-                <input id="email" name="email" type="text" placeholder="" class="form-control input-md" th:field="*{email}" required="">
+                <input id="email" name="email" type="email" placeholder="" class="form-control input-md" th:field="*{email}" required
+                       minlength="6" maxlength="40">
 
             </div>
         </div>
@@ -44,7 +48,8 @@
         <div class="form-group">
             <label class="col-md-4 control-label" for="password">Password</label>
             <div class="col-md-4">
-                <input id="password" name="password" type="password" placeholder="" class="form-control input-md" th:field="*{password}" required="">
+                <input id="password" name="password" type="password" placeholder="" class="form-control input-md" th:field="*{password}" required
+                 minlength="6" maxlength="10">
 
             </div>
         </div>
