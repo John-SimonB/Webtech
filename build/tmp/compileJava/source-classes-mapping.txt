@@ -1,28 +1,28 @@
-htw/berlin/WebtechProjekt/Controller/ToDoController.java
- htw.berlin.WebtechProjekt.Controller.ToDoController
-htw/berlin/WebtechProjekt/Models/Status.java
- htw.berlin.WebtechProjekt.Models.Status
-htw/berlin/WebtechProjekt/Registration/Security/WebSecurityConfig.java
- htw.berlin.WebtechProjekt.Registration.Security.WebSecurityConfig
-htw/berlin/WebtechProjekt/WebtechProjektApplication.java
- htw.berlin.WebtechProjekt.WebtechProjektApplication
-htw/berlin/WebtechProjekt/Models/ToDoUser.java
- htw.berlin.WebtechProjekt.Models.ToDoUser
-htw/berlin/WebtechProjekt/Services/UserService.java
- htw.berlin.WebtechProjekt.Services.UserService
-htw/berlin/WebtechProjekt/Repository/UserRepository.java
- htw.berlin.WebtechProjekt.Repository.UserRepository
-htw/berlin/WebtechProjekt/Services/ToDoListService.java
- htw.berlin.WebtechProjekt.Services.ToDoListService
-htw/berlin/WebtechProjekt/Models/UserRole.java
- htw.berlin.WebtechProjekt.Models.UserRole
 htw/berlin/WebtechProjekt/Repository/ToDoRepository.java
  htw.berlin.WebtechProjekt.Repository.ToDoRepository
 htw/berlin/WebtechProjekt/Models/ToDoListEntity.java
  htw.berlin.WebtechProjekt.Models.ToDoListEntity
-htw/berlin/WebtechProjekt/Registration/Security/PasswordEncoder.java
- htw.berlin.WebtechProjekt.Registration.Security.PasswordEncoder
-htw/berlin/WebtechProjekt/Registration/RegistrationRequest.java
- htw.berlin.WebtechProjekt.Registration.RegistrationRequest
+htw/berlin/WebtechProjekt/Models/Status.java
+ htw.berlin.WebtechProjekt.Models.Status
+htw/berlin/WebtechProjekt/Models/UserRole.java
+ htw.berlin.WebtechProjekt.Models.UserRole
 htw/berlin/WebtechProjekt/Services/Runner.java
  htw.berlin.WebtechProjekt.Services.Runner
+htw/berlin/WebtechProjekt/WebtechProjektApplication.java
+ htw.berlin.WebtechProjekt.WebtechProjektApplication
+htw/berlin/WebtechProjekt/Models/ToDoUser.java
+ htw.berlin.WebtechProjekt.Models.ToDoUser
+htw/berlin/WebtechProjekt/Repository/UserRepository.java
+ htw.berlin.WebtechProjekt.Repository.UserRepository
+htw/berlin/WebtechProjekt/Services/ToDoListService.java
+ htw.berlin.WebtechProjekt.Services.ToDoListService
+htw/berlin/WebtechProjekt/Models/CustomUserDetails.java
+ htw.berlin.WebtechProjekt.Models.CustomUserDetails
+htw/berlin/WebtechProjekt/Controller/ToDoController.java
+ htw.berlin.WebtechProjekt.Controller.ToDoController
+htw/berlin/WebtechProjekt/Services/CustomUserDetailsService.java
+ htw.berlin.WebtechProjekt.Services.CustomUserDetailsService
+htw/berlin/WebtechProjekt/Registration/Security/PasswordEncoder.java
+ htw.berlin.WebtechProjekt.Registration.Security.PasswordEncoder
+htw/berlin/WebtechProjekt/Registration/Security/WebSecurityConfig.java
+ htw.berlin.WebtechProjekt.Registration.Security.WebSecurityConfig
