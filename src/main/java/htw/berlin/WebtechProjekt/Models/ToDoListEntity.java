@@ -15,13 +15,12 @@ public class ToDoListEntity {
     private String task;
 
     @Column (name ="Status")
-    @Enumerated(value = EnumType.STRING)
-    private Status state;
+    private boolean state = false;
 
     @Column (name ="Deadline")
     private LocalDate deadline;
 
-    public ToDoListEntity(String task, Status state, LocalDate deadline) {
+    public ToDoListEntity(String task, boolean state, LocalDate deadline) {
         this.task = task;
         this.state = state;
         this.deadline = deadline;
@@ -30,16 +29,16 @@ public class ToDoListEntity {
     protected ToDoListEntity() {
     }
 
+    public boolean isState() {
+        return state;
+    }
+
     public Long getId() {
         return id;
     }
 
     public String getTask() {
         return task;
-    }
-
-    public Status isStatus() {
-        return state;
     }
 
     public LocalDate getDeadline() {
