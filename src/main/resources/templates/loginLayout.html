@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html th:fragment="layout (template)" lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta id="Viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no, shrink-to-fit=no" />
+</head>
+<body>
+<header>
+  <div class="b-example-divider"></div>
+  <header class="p-3 bg-dark text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+        </a>
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <h2>Melde dich bitte an, oder Registriere dich.</h2>
+        </ul>
+        <div class="text-end">
+
+        </div>
+      </div>
+    </div>
+  </header>
+</header>
+<main role="main" class="content-wrapper mt-r">
+  <div class="container">
+    <section th:include="${template}"></section>
+  </div>
+</main>
+</body>
+</html>
