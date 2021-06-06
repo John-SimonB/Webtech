@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html th:replace="~{loginLayout :: layout (~{::body})}" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Registration Succeeded!</title>
 </head>
 <body>
-  <div class="container text-center">
+<div style="width: 50%; margin: 150px auto;">
       <div>
-        <h3>You have signed up successfully!</h3>
-      <h4><a th:href="@{/login}" >Click here to login</a></h4>
+          <h1>Du hast dich erfolgreich bei uns angemeldet </h1>
+          <a class="btn btn-warning" th:action="@{/login}" th:href="@{/login}" th:classappend="${#request.requestURI == '/login' ? 'active':''}">Zurück zum Login</a>
       </div>
-  </div>
+</div>
 </body>
 </html>
