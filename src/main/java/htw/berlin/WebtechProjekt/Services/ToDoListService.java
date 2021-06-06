@@ -1,6 +1,5 @@
 package htw.berlin.WebtechProjekt.Services;
 
-import htw.berlin.WebtechProjekt.Models.Status;
 import htw.berlin.WebtechProjekt.Models.ToDoListEntity;
 import htw.berlin.WebtechProjekt.Repository.ToDoRepository;
 import org.springframework.beans.factory.annotation.Autowired;

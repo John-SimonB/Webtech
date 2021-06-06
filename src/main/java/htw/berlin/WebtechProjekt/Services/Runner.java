@@ -6,7 +6,6 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 
-import static htw.berlin.WebtechProjekt.Models.Status.offen;
 
 @Component
 public class Runner implements CommandLineRunner {
@@ -16,7 +15,7 @@ public class Runner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        //toDoListService.deleteAll();
+        //toDoListService.addToDo("Saugen", false, LocalDate.now());
         //toDoListService.addToDo("Waschen", offen, LocalDate.now());
         //toDoListService.addToDo("Putzen", offen, LocalDate.now());
     }

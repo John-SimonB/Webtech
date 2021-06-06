@@ -15,14 +15,14 @@ public class ToDoListEntity {
     private String task;
 
     @Column (name ="Status")
-    private boolean state = false;
+    private boolean active = false;
 
     @Column (name ="Deadline")
     private LocalDate deadline;
 
-    public ToDoListEntity(String task, boolean state, LocalDate deadline) {
+    public ToDoListEntity(String task, boolean active, LocalDate deadline) {
         this.task = task;
-        this.state = state;
+        this.active = active;
         this.deadline = deadline;
     }
 
@@ -30,7 +30,7 @@ public class ToDoListEntity {
     }
 
     public boolean isState() {
-        return state;
+        return active;
     }
 
     public Long getId() {
