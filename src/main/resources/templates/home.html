@@ -1,23 +1,12 @@
 <!DOCTYPE html>
-<html th:replace="~{layout :: layout (~{::body})}">
+<html th:replace="~{layout :: layout (~{::body})}" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
 <body>
-<h1>Home</h1>
-<table class="table table-dark">
-    <thead>
-    <tr>
-        <th scope="col">Aufgabe</th>
-        <th scope="col">Deadline</th>
-        <th scope="col">Status</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="ToDoListEntity: ${todos}">
-        <td th:text="${ToDoListEntity.task}">
-        <td th:text="${ToDoListEntity.deadline}">
-    <tr>
-    <tbody>
-</table>
+<div style="width: 50%; margin: 150px auto;">
+    <h1>Willkommen auf der Todo-Seite.</h1>
+    <h3>Hier kannst du für dich ToDos erstellen, anpassen oder löschen.</h3>
+</div>
 </body>
 </html>
-
-// habe erstmal den Status entfernt, da er nicht funktioniert - er ist irgendwie immer null

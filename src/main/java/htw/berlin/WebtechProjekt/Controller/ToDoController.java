@@ -26,11 +26,17 @@ public class ToDoController {
     @Autowired
     public UserRepository userRepository;
 
+
     @GetMapping(path = "/")
     public String showhome(Model model) {
+        return "home";
+    }
+
+    @GetMapping(path = "/todos")
+    public String showtodo(Model model) {
         List<ToDoListEntity> todo =toDoListService.findAll();
         model.addAttribute("todos", toDoListService.findAll());
-        return "home";
+        return "todos";
     }
 
     @GetMapping(path = "/createtodo")

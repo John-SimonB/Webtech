@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html th:replace="~{layout :: layout (~{::body})}" xmlns:th="https://www.thymeleaf.org">
+<body>
+<h1>Das sind deine aktuellen Todos:</h1>
+<table class="table table-dark">
+    <thead>
+    <tr>
+        <th scope="col">Aufgabe</th>
+        <th scope="col">Deadline</th>
+        <th scope="col">Status</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="ToDoListEntity: ${todos}">
+        <td th:text="${ToDoListEntity.task}">
+        <td th:text="${ToDoListEntity.deadline}">
+        <td th:text="${ToDoListEntity.state}">
+    <tr>
+    <tbody>
+</table>
+</body>
+</html>

@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html th:replace="~{layout :: layout (~{::body})}">
 <body>
-<h1>List of all Users</h1>
+<p></p>
 <table class="table table-dark">
   <thead class="thead-dark">
   <tr>
-    <th>User Id</th>
-    <th> E-Mail</th>
-    <th> First Name</th>
-    <th> Last Name</th>
+    <th>Benutzer ID</th>
+    <th> Vorname</th>
+    <th> Nachname</th>
+      <th> E-Mail</th>
   </tr>
   </thead>
   <tbody>
       <tr th:each="toDoUser: ${listUsers}">
-          <td th:text="${toDoUser.id}">User ID</td>
-          <td th:text="${toDoUser.firstName}">First Name</td>
-          <td th:text="${toDoUser.lastName}">Last Name</td>
+          <td th:text="${toDoUser.id}">Benutzer ID</td>
+          <td th:text="${toDoUser.firstName}">Vorname</td>
+          <td th:text="${toDoUser.lastName}">Nachname</td>
           <td th:text="${toDoUser.email}">E-Mail</td>
       </tr>
   <tbody>
