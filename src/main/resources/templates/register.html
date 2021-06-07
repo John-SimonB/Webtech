@@ -43,11 +43,22 @@
         <p></p>
         <!-- Password input-->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="password">Passwort</label>
-                <input id="password" name="password" type="password" placeholder="Passwort" class="form-control input-md" th:field="*{password}" required
-                 minlength="6" maxlength="10">
+            <label class="col-md-4 control-label">Passwort</label>
+                <input id="myInput" name="password" type="password" placeholder="Passwort" class="form-control input-md" th:field="*{password}" required
+                 minlength="6" maxlength="10" >
+            <p></p>
+            <input type="checkbox" onclick="myFunction()"> Passwort anzeigen
         </div>
-
+        <script>
+            function myFunction() {
+                var x = document.getElementById("myInput");
+                if (x.type === "password") {
+                    x.type = "text";
+                } else {
+                    x.type = "password";
+                }
+            }
+        </script>
         <p></p>
         <!-- Button (Double) -->
                 <button id="save" name="save" class="btn btn-success">Registrieren</button>

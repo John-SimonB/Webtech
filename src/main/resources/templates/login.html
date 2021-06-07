@@ -19,12 +19,25 @@
             <input type="text" id="username" name="email" class="form-control"  placeholder="E-Mail" required autofocus>
         </p>
         <p>
-            <label for="password" class="sr-only">Passwort</label>
-            <input type="password" id="password" name="password" class="form-control"  placeholder="Passwort" required>
+            <label class="sr-only">Passwort</label>
+            <input type="password" id="myInput" name="password" class="form-control"  placeholder="Passwort" required>
         </p>
+        <input type="checkbox" onclick="myFunction()"> Passwort anzeigen
+        <p></p>
         <button class="btn btn-success"  type="submit">Einloggen</button>
         <a class="btn btn-warning" th:action="@{/registration}" th:href="@{/registration}" th:classappend="${#request.requestURI == '/registration' ? 'active':''}">Registrieren</a>
     </form>
 </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
 </div>
-</body></html>
+</body>
+</html>
