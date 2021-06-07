@@ -6,6 +6,7 @@ import htw.berlin.WebtechProjekt.Repository.ToDoRepository;
 import htw.berlin.WebtechProjekt.Repository.UserRepository;
 import htw.berlin.WebtechProjekt.Services.ToDoListService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -32,18 +33,20 @@ public class ToDoController {
         return "home";
     }
 
-    @GetMapping(path = "/todos")
-    public String showtodo(Model model) {
-        List<ToDoListEntity> todo =toDoListService.findAll();
-        model.addAttribute("todos", toDoListService.findAll());
-        return "todos";
+    @GetMapping(path = "/tut")
+    public String showtut(Model model) {
+        return "tutorial";
     }
 
-    @GetMapping(path = "/createtodo")
-    public String showcreatetodo(@ModelAttribute Model model, ToDoListEntity toDoListEntity) {
-        toDoRepository.save(toDoListEntity);
-        model.addAttribute("todo", toDoListEntity);
-        return "createtodo";
+    @GetMapping(path = "/todos")
+    public List<ToDoListEntity> allToDos(@AuthenticationPrincipal ToDoUser toDoUser, Model model){
+        return toDoListService.findAll(toDoUser.getUsername());
+    }
+
+    @PostMapping(path = "/todos")
+    public ToDoListEntity createTodo(@AuthenticationPrincipal ToDoUser toDoUser, ToDoListEntity toDoListEntity){
+        toDoListEntity.setOwner(toDoUser.getUsername());
+        return toDoListService.save(toDoListEntity);
     }
 
     @GetMapping(path = "/login")

@@ -20,16 +20,28 @@ public class ToDoListEntity {
     @Column (name ="Deadline")
     private LocalDate deadline;
 
-    public ToDoListEntity(String task, boolean active, LocalDate deadline) {
+    @Column
+    private String owner = "";
+
+    public ToDoListEntity(String task, boolean active, LocalDate deadline, String owner) {
         this.task = task;
         this.active = active;
         this.deadline = deadline;
+        this.owner = owner;
     }
 
     protected ToDoListEntity() {
     }
 
-    public boolean isState() {
+    public void setOwner(String owner) {
+        this.owner = owner;
+    }
+
+    public String getOwner() {
+        return owner;
+    }
+
+    public boolean isActive() {
         return active;
     }
 

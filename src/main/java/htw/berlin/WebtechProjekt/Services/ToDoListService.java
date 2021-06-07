@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -14,26 +15,32 @@ public class ToDoListService {
     @Autowired
     private ToDoRepository ToDoRepo;
 
-    public List<ToDoListEntity> findAll() {
-        List<ToDoListEntity> ToDos = ToDoRepo.findAll();
-        return ToDos;
+    public List<ToDoListEntity> findAll(String user) {
+
+        var iterator = ToDoRepo.findAll();
+        var todos = new ArrayList<ToDoListEntity>();
+        for(ToDoListEntity t : iterator) {
+            if(t.getOwner()!=null && t.getOwner().equals(user)) todos.add(t);
+
+        }
+        return todos;
     }
 
-    public void addToDo(String task, Boolean state, LocalDate date) {
-        ToDoListEntity newToDo = new ToDoListEntity(task, state, date);
+    public void addToDo(String task, Boolean state, LocalDate date, String owner) {
+        ToDoListEntity newToDo = new ToDoListEntity(task, state, date, owner);
         ToDoRepo.save(newToDo);
     }
 
-    public void deleteToDo(String id) {
-        Long ToDoId = Long.parseLong(id);
-        ToDoRepo.deleteById(ToDoId);
+    public void deleteToDo(Long id) {
+        ToDoRepo.deleteById(id);
     }
 
     public void deleteAll(){
         ToDoRepo.deleteAll();
     }
 
-    public void save(ToDoListEntity toDoListEntity) {
+    public ToDoListEntity save(ToDoListEntity toDoListEntity) {
         ToDoRepo.save(toDoListEntity);
+        return toDoListEntity;
     }
 }

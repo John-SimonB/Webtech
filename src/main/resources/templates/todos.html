@@ -1,22 +1,15 @@
 <!DOCTYPE html>
 <html th:replace="~{layout :: layout (~{::body})}" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8"/>
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="#" th:src="@{/js/dynamic.js}" defer></script>
+</head>
 <body>
-<h1>Das sind deine aktuellen Todos:</h1>
-<table class="table table-dark">
-    <thead>
-    <tr>
-        <th scope="col">Aufgabe</th>
-        <th scope="col">Deadline</th>
-        <th scope="col">Status</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="ToDoListEntity: ${todos}">
-        <td th:text="${ToDoListEntity.task}">
-        <td th:text="${ToDoListEntity.deadline}">
-        <td th:text="${ToDoListEntity.state}">
-    <tr>
-    <tbody>
-</table>
+<div id="dynamic">
+    <dynamic></dynamic>
+</div>
 </body>
 </html>
