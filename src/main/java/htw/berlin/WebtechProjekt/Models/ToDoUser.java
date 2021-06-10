@@ -9,7 +9,7 @@ import java.util.Collections;
 
 @Entity
 @Table
-public class ToDoUser implements UserDetails {
+public class ToDoUser  {
 
 
     @Id
@@ -61,50 +61,23 @@ public class ToDoUser implements UserDetails {
 
     public void setLastName(String lastName) { this.lastName = lastName; }
 
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return getAuthorities();
-    }
+    public Collection<? extends GrantedAuthority> getAuthorities() { return getAuthorities(); }
 
     public Long getId() { return id; }
 
     public String getEmail() { return email; }
 
-    @Override
-    public String getPassword() {
-        return password;
-    }
+    public String getPassword() { return password; }
 
-    @Override
-    public String getUsername() {
-        return email;
-    }
+    public String getFirstName() { return firstName; }
 
-    public String getFirstName() {
-        return firstName;
-    }
+    public String getLastName() { return lastName; }
 
-    public String getLastName() {
-        return lastName;
-    }
+    public boolean isAccountNonExpired() { return isAccountNonExpired; }
 
-    @Override
-    public boolean isAccountNonExpired() {
-        return isAccountNonExpired;
-    }
+    public boolean isAccountNonLocked() { return isAccountNonLocked; }
 
-    @Override
-    public boolean isAccountNonLocked() {
-        return isAccountNonLocked;
-    }
+    public boolean isCredentialsNonExpired() { return isCredentialsNonExpired; }
 
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return isCredentialsNonExpired;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return isEnabled;
-    }
+    public boolean isEnabled() { return isEnabled; }
 }

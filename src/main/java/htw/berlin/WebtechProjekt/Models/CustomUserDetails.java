@@ -28,6 +28,10 @@ public class CustomUserDetails implements UserDetails {
         return toDoUser.getEmail();
     }
 
+    public void setToDoUser(ToDoUser toDoUser) {
+        this.toDoUser = toDoUser;
+    }
+
     @Override
     public boolean isAccountNonExpired() {
         return true;

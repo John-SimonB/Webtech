@@ -43,6 +43,11 @@ public class ToDoController {
         return toDoListService.findAll(toDoUser.getUsername());
     }
 
+    @GetMapping(path = "/test")
+    public String test(Model model) {
+        return "todos";
+    }
+
     @PostMapping(path = "/todos")
     public ToDoListEntity createTodo(ToDoListEntity toDoListEntity){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

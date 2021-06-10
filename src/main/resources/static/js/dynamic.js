@@ -7,7 +7,7 @@ app.component('button-counter', {
     },
     template: `
     <button @click="count++">
-    Du hast mich {{ count }} geklickt!
+    Du hast mich {{ count }} mal geklickt!
     </button>`
 })
 
