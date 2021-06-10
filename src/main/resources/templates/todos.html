@@ -5,11 +5,12 @@
     <script src="https://unpkg.com/vue@next" defer></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script src="#" th:src="@{/js/dynamic.js}" defer></script>
+    <script src="#" type="module" th:src="@{/js/dynamic.js}" defer></script>
 </head>
 <body>
-<div id="dynamic">
-    <dynamic></dynamic>
+<h1>DAS IST EIN TEST</h1>
+<div id="components-demo">
+    <button-counter></button-counter>
 </div>
 </body>
 </html>

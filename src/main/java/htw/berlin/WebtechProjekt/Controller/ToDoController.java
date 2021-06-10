@@ -1,12 +1,15 @@
 package htw.berlin.WebtechProjekt.Controller;
 
+import htw.berlin.WebtechProjekt.Models.CustomUserDetails;
 import htw.berlin.WebtechProjekt.Models.ToDoListEntity;
 import htw.berlin.WebtechProjekt.Models.ToDoUser;
 import htw.berlin.WebtechProjekt.Repository.ToDoRepository;
 import htw.berlin.WebtechProjekt.Repository.UserRepository;
 import htw.berlin.WebtechProjekt.Services.ToDoListService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -33,18 +36,17 @@ public class ToDoController {
         return "home";
     }
 
-    @GetMapping(path = "/tut")
-    public String showtut(Model model) {
-        return "tutorial";
-    }
-
     @GetMapping(path = "/todos")
-    public List<ToDoListEntity> allToDos(@AuthenticationPrincipal ToDoUser toDoUser, Model model){
+    public List<ToDoListEntity> allToDos(Model model){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        CustomUserDetails toDoUser = (CustomUserDetails) authentication.getPrincipal();
         return toDoListService.findAll(toDoUser.getUsername());
     }
 
     @PostMapping(path = "/todos")
-    public ToDoListEntity createTodo(@AuthenticationPrincipal ToDoUser toDoUser, ToDoListEntity toDoListEntity){
+    public ToDoListEntity createTodo(ToDoListEntity toDoListEntity){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        CustomUserDetails toDoUser = (CustomUserDetails) authentication.getPrincipal();
         toDoListEntity.setOwner(toDoUser.getUsername());
         return toDoListService.save(toDoListEntity);
     }

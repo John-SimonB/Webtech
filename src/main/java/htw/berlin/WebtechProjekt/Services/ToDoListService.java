@@ -1,6 +1,7 @@
 package htw.berlin.WebtechProjekt.Services;
 
 import htw.berlin.WebtechProjekt.Models.ToDoListEntity;
+import htw.berlin.WebtechProjekt.Models.ToDoUser;
 import htw.berlin.WebtechProjekt.Repository.ToDoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,12 +16,14 @@ public class ToDoListService {
     @Autowired
     private ToDoRepository ToDoRepo;
 
-    public List<ToDoListEntity> findAll(String user) {
+    public List<ToDoListEntity> findAll(String toDoUser) {
 
         var iterator = ToDoRepo.findAll();
         var todos = new ArrayList<ToDoListEntity>();
         for(ToDoListEntity t : iterator) {
-            if(t.getOwner()!=null && t.getOwner().equals(user)) todos.add(t);
+            if(t.getOwner()!=null && t.getOwner().equals(toDoUser)){
+                todos.add(t);
+            }
 
         }
         return todos;
