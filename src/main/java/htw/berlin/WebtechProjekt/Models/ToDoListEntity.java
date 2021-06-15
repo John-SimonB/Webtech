@@ -15,7 +15,7 @@ public class ToDoListEntity {
     private String task;
 
     @Column (name ="Status")
-    private boolean active = false;
+    private boolean active;
 
     @Column (name ="Deadline")
     private LocalDate deadline;
