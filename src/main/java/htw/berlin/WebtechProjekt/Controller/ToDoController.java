@@ -16,6 +16,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -45,7 +46,7 @@ public class ToDoController {
 
 
     @PostMapping(path = "/todos")
-    public ToDoListEntity createTodo(ToDoListEntity toDoListEntity){
+    public ToDoListEntity createTodo(@RequestBody ToDoListEntity toDoListEntity){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         CustomUserDetails toDoUser = (CustomUserDetails) authentication.getPrincipal();
         toDoListEntity.setOwner(toDoUser.getUsername());
