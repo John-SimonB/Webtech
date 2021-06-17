@@ -14,8 +14,8 @@ public class ToDoListEntity {
     @Column (nullable = false) // Wert darf nicht null sein
     private String task;
 
-    @Column (name ="Status")
-    private boolean active;
+   /* @Column (name ="Status")
+    private boolean active; */
 
     @Column (name ="Deadline")
     private LocalDate deadline;
@@ -23,9 +23,9 @@ public class ToDoListEntity {
     @Column
     private String owner = "";
 
-    public ToDoListEntity(String task, boolean active, LocalDate deadline, String owner) {
+    public ToDoListEntity(String task, /*boolean active,*/ LocalDate deadline, String owner) {
         this.task = task;
-        this.active = active;
+        //this.active = active;
         this.deadline = deadline;
         this.owner = owner;
     }
@@ -41,9 +41,7 @@ public class ToDoListEntity {
         return owner;
     }
 
-    public boolean isActive() {
-        return active;
-    }
+   // public boolean isActive() {return active;}
 
     public Long getId() {
         return id;

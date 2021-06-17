@@ -15,8 +15,8 @@ public class Runner implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        //toDoListService.addToDo("Saugen", false, LocalDate.now(), "john@gmail.com");
-        //toDoListService.addToDo("Waschen", offen, LocalDate.now());
-        //toDoListService.addToDo("Putzen", offen, LocalDate.now());
+        //toDoListService.addToDo("Saugen", LocalDate.now(), "john@gmail.com");
+        //toDoListService.addToDo("Waschen", LocalDate.now());
+        //toDoListService.addToDo("Putzen", LocalDate.now());
     }
 }
