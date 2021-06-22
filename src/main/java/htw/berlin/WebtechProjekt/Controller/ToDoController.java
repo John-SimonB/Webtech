@@ -37,13 +37,12 @@ public class ToDoController {
         return "home";
     }
 
-    @GetMapping(path = "/todos")
-    public List<ToDoListEntity> allToDos(Model model){
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        CustomUserDetails toDoUser = (CustomUserDetails) authentication.getPrincipal();
-        return toDoListService.findAll(toDoUser.getUsername());
-    }
 
+
+    @GetMapping(path = "/todos")
+    public String showtodos() {
+        return "todos";
+    }
 
     @PostMapping(path = "/todos")
     public ToDoListEntity createTodo(@RequestBody ToDoListEntity toDoListEntity){
@@ -57,6 +56,7 @@ public class ToDoController {
     public String showlogin() {
         return "login";
     }
+
 
     @GetMapping(path = "/registration")
     public String showRegistrationPage(Model model) {

@@ -8,6 +8,9 @@ app.component('todos', {
     <input v-model="dateField" type="date" placeholder="Deadline" class="col-md-4 control-label"><a></a>
     <button type="button" @click="save()" class="btn btn-success">Speichern</button>
     </div>
+    <p>Solltest du ein ToDo erledigt haben, dann setz einfach ein Häkchen :)</p>
+    <p></p>
+    <h3>Erledigt: {{count}}</h3>
     <p></p>
     <table class="table table-dark">
         <thead>
@@ -24,14 +27,14 @@ app.component('todos', {
                 <td></td>
             </tr>
             <tr v-for="todos in items">
-                <input type="checkbox" @change="toggleAll(items, $event.target.checked)" >
-                <td>{{todos.todoField}}</td>
-                <td>{{todos.dateField}}</td>
+                <td>{{todos.task}}</td>
+                <td>{{todos.deadline}}</td>
             </tr>
             <tr>
-                <td><input type="checkbox" v.model="completed" ></td>
+                <td><input type="checkbox" v.model="completed" @click="count++"></td>
                 <td>{{todoField}}</td>
                 <td>{{dateField}}</td>
+                <td><button type="button" @click="deletetodo(todo.id)" class="btn btn-danger">Löschen</button></td>
             </tr> 
         </tbody>
         </table>
@@ -41,13 +44,17 @@ app.component('todos', {
             items: [],
             todoField: '',
             dateField: '',
+            count: 0
            // owner: '',
         };
     },
     methods: {
         loadToDos() {
-            axios.get('/todos')
-                .then(response => (this.todos = response.data))
+            axios.get('/rest/todos')
+                .then(response => {
+                    this.items = response.data
+                    console.log(response.data)
+                })
         },
         toggleAll(input, checked) {
             for (let key in input) {
@@ -56,6 +63,13 @@ app.component('todos', {
                     input[key] = checked
                 }
             }
+        },
+        deletetodo() {
+            axios.delete('/item/'+id).then();
+        }
+        ,
+        checkboxcheck(){
+
         },
         save() {
             axios.post('/todos', {
