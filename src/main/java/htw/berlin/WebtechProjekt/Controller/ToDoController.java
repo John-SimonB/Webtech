@@ -37,8 +37,6 @@ public class ToDoController {
         return "home";
     }
 
-
-
     @GetMapping(path = "/todos")
     public String showtodos() {
         return "todos";

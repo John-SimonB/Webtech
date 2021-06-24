@@ -31,6 +31,15 @@ public class ToDoListService {
         ToDoRepo.save(newToDo);
     }
 
+    /*
+    public boolean deleteToDo(Long id) {
+        ToDoRepo.deleteById(id);
+        if(ToDoRepo.findAll().equals(ToDoRepo.getOne(id))) {
+            return false;
+        }
+        return true;
+    }
+    */
     public void deleteToDo(Long id) {
         ToDoRepo.deleteById(id);
     }
