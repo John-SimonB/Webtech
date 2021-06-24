@@ -72,11 +72,13 @@ table {
     size: 100;
     text-align: center;
     font-weight: bold;
-}
 
+}
 body {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url(../image/background.jpg);
     background-size: cover;
-    background-image: url(../image/background.jpg);
+    height: 100vh;
+
 }
 
 

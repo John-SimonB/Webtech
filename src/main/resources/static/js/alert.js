@@ -1,4 +1,4 @@
-const alert = {
+const Alert = {
     init() {
         this.hideTimeout = null;
 
@@ -22,4 +22,4 @@ const alert = {
     }
 };
 
-document.addEventListener('DOMContentLoaded', () => alert.init());
+document.addEventListener('DOMContentLoaded', () => Alert.init());
