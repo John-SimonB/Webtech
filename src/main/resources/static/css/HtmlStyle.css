@@ -1,0 +1,82 @@
+.btntrash {
+    background-color: rgb(221, 223, 218);    border: none;
+    color: red;
+    padding: 10px 10px;
+    font-size: 17px;
+    cursor: pointer;
+    align-content: center;
+}
+
+.btn:hover {
+    background-color: grey;
+}
+
+ul li.checked {
+    text-decoration: line-through;
+}
+
+.alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+
+    max-width: 400px;
+    padding: 6px;
+    background: white;
+    color: green;
+    font-family: sans-serif;
+    text-align: center;
+    border: 1px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s, top 0.2s, visibility 0.2s;
+}
+
+.alert--visible{
+    top: 20px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.alert--success {
+    background: #00C02B;
+    border-color: #009D23;
+    color: white;
+}
+
+.alert--error{
+    background: #D50000;
+    border-color: #BA0000;
+    color: white;
+}
+
+.box {
+    background-color: rgb(221, 223, 218);
+    border-color: black;
+    border-radius: 40px 10px;
+}
+
+table {
+    font-size: 20px;
+    text-align: left;
+    vertical-align: center;
+    font-weight: bold;
+}
+
+.text {
+    color: black;
+    size: 100;
+    text-align: center;
+    font-weight: bold;
+}
+
+body {
+    background-size: cover;
+    background-image: url(../image/background.jpg);
+}
+
+
