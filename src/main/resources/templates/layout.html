@@ -9,15 +9,18 @@
   <script src="https://unpkg.com/vue@next" defer></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <script src="#" type="module" th:src="@{/js/dynamic.js}" defer></script>
+  <script type="module" src="#" th:src="@{/js/dynamic.js}" defer></script>
   <link rel="stylesheet" th:href="@{/css/HtmlStyle.css}">
 </head>
+
 <body>
 <header>
   <div class="b-example-divider"></div>
 
 
   <header class="p-3 bg-dark text-white">
+
+      <div class="image" ></div>
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
         <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
@@ -41,6 +44,7 @@
   <div class="container">
     <section th:include="${template}"></section>
   </div>
+    <script th:src="@{/js/alert.js}"></script>
 </main>
 </body>
 </html>
