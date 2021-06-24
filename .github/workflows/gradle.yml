@@ -24,4 +24,8 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
+      env:
+        TODO_USERNAME: ${{ secrets.TODO_USERNAME }}
+        TODO_PASSWORD: ${{ secrets.TODO_PASSWORD }}
+        TODO_URL: ${{ secrets.TODO_URL}}
       run: ./gradlew build
