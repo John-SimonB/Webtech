@@ -5,6 +5,7 @@
     <title>Registration Succeeded!</title>
 </head>
 <body>
+<div class="box">
 <div class="text-center">
       <div>
           <p></p>
@@ -12,6 +13,7 @@
           <h1>Du hast dich erfolgreich bei uns angemeldet </h1>
           <a class="btn btn-warning" th:action="@{/login}" th:href="@{/login}" th:classappend="${#request.requestURI == '/login' ? 'active':''}">Zurück zum Login</a>
       </div>
+</div>
 </div>
 </body>
 </html>
