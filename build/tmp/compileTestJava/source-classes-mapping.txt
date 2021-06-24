@@ -1,6 +1,8 @@
 htw/berlin/WebtechProjekt/WebtechProjektApplicationTests.java
  htw.berlin.WebtechProjekt.HelloControllerIT
-htw/berlin/WebtechProjekt/UserRepositoryTests.java
- htw.berlin.WebtechProjekt.UserRepositoryTests
 htw/berlin/WebtechProjekt/HelloControllerTest.java
  htw.berlin.WebtechProjekt.HelloControllerTest
+htw/berlin/WebtechProjekt/UserRepositoryTests.java
+ htw.berlin.WebtechProjekt.UserRepositoryTests
+htw/berlin/WebtechProjekt/boottest/ToDoListServiceTest.java
+ htw.berlin.WebtechProjekt.boottest.ToDoListServiceTest
