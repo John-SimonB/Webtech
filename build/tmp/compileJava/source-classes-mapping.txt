@@ -2,10 +2,10 @@ htw/berlin/WebtechProjekt/Controller/WebSecurityConfig.java
  htw.berlin.WebtechProjekt.Controller.WebSecurityConfig
 htw/berlin/WebtechProjekt/Models/CustomUserDetails.java
  htw.berlin.WebtechProjekt.Models.CustomUserDetails
-htw/berlin/WebtechProjekt/Controller/Security/PasswordEncoder.java
- htw.berlin.WebtechProjekt.Controller.Security.PasswordEncoder
 htw/berlin/WebtechProjekt/Repository/UserRepository.java
  htw.berlin.WebtechProjekt.Repository.UserRepository
+htw/berlin/WebtechProjekt/Controller/Security/PasswordEncoder.java
+ htw.berlin.WebtechProjekt.Controller.Security.PasswordEncoder
 htw/berlin/WebtechProjekt/Services/CustomUserDetailsService.java
  htw.berlin.WebtechProjekt.Services.CustomUserDetailsService
 htw/berlin/WebtechProjekt/Repository/ToDoRepository.java
