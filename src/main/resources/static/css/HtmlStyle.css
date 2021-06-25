@@ -11,9 +11,6 @@
     background-color: grey;
 }
 
-ul li.checked {
-    text-decoration: line-through;
-}
 
 .alert {
     position: fixed;
@@ -81,4 +78,7 @@ body {
 
 }
 
-
+.checkedBox:checked + .checkedLabel {
+    text-decoration: line-through;
+    color: blue;
+}

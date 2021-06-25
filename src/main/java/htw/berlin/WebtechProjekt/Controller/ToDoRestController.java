@@ -53,8 +53,8 @@ public class ToDoRestController {
     */
 
     @DeleteMapping(path = "/rest/deletetodo/{id}")
-    public ResponseEntity<Long> delete(@PathVariable long id) {
-        toDoListService.deleteToDo(id);
+    public ResponseEntity<String> delete(@PathVariable String id) {
+        toDoListService.deleteToDo(Long.parseLong(id));
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }

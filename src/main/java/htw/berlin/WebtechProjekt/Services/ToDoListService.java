@@ -40,7 +40,7 @@ public class ToDoListService {
         return true;
     }
     */
-    public void deleteToDo(Long id) {
+    public void deleteToDo(long id) {
         ToDoRepo.deleteById(id);
     }
 
