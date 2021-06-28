@@ -28,4 +28,4 @@ jobs:
         TODO_USERNAME: ${{ secrets.TODO_USERNAME }}
         TODO_PASSWORD: ${{ secrets.TODO_PASSWORD }}
         TODO_URL: ${{ secrets.TODO_URL}}
-      run: ./gradlew build
+      run: ./gradlew test
