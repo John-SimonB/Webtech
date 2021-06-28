@@ -10,7 +10,7 @@ app.component('todos', {
      <p></p>
        <label for="username" class="custom-field three">
      <input v-model="todoField" type="text" placeholder="Aufgabe" class="custom-file three" ref="todoInput"> <a></a>
-     <input v-model="dateField" type="date" min='2021-06-20' placeholder="Deadline" class="custom-file three"> <a></a>
+     <input id="datefield" v-model="dateField" @click="date()" type="date" min="" placeholder="Deadline" class="custom-file three"> <a></a>
      <button type="button" @click="save()" class="btn btn-success">Speichern</button>
        <br>
      </div>
@@ -56,6 +56,21 @@ app.component('todos', {
         };
     },
     methods: {
+        date() {
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth()+1; //January is 0 so need to add 1 to make it 1!
+            var yyyy = today.getFullYear();
+            if(dd<10){
+                dd='0'+dd
+            }
+            if(mm<10){
+                mm='0'+mm
+            }
+
+            today = yyyy+'-'+mm+'-'+dd;
+            document.getElementById("datefield").setAttribute("min", today);
+        },
         checkboxclick () {
             const x = document.getElementById("checkbox");
             const y = document.getElementById("checkbox1");
