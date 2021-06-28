@@ -8,6 +8,8 @@ Falls dies zu wenig sein sollte, haben wir uns überlegt einen Kalender hinzuzuf
 (Dieser wäre nur zur Veranschaulichung und nicht zum Bearbeiten gedacht).
 # Erklärung der Website:
 
+Die Website ist abrufbar über folgenden Link: http://todolistwebtech.herokuapp.com/
+
 Willkommen auf unserer ToDoList-Website! Logge dich als Nutzer ein oder registriere dich als neuer Nutzer über unsere Registrierungsseite. 
 Nachdem du als Nutzer eingeloggt bist, kannst du dir über den "ToDo"-Reiter deine ganz persönliche ToDo-Liste anzeigen lassen. 
 Hier kannst du neue ToDo's erstellen, indem du einen Namen und eine Deadline für dein neues ToDo einträgst. Sollten dir deine erstellten ToDo's 
