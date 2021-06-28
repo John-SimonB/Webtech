@@ -1,4 +1,4 @@
-package htw.berlin.WebtechProjekt.Controller;
+package htw.berlin.WebtechProjekt.Controller.Security;
 
 import htw.berlin.WebtechProjekt.Services.CustomUserDetailsService;
 //import htw.berlin.WebtechProjekt.Services.UserService;
