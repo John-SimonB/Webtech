@@ -12,6 +12,7 @@ app.component('todos', {
      <input v-model="todoField" type="text" placeholder="Aufgabe" class="custom-file three" ref="todoInput"> <a></a>
      <input id="datefield" v-model="dateField" @click="date()" type="date" min="" placeholder="Deadline" class="custom-file three"> <a></a>
      <button type="button" @click="save()" class="btn btn-success">Speichern</button>
+       </label>
        <br>
      </div>
      </div>
