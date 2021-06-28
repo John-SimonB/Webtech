@@ -251,7 +251,7 @@ button {
 }
 
 .btn.shinny {
-    background: linear-gradient(65deg, #cbcb72, #c1c1ad, #c2c29c, #c7c76d) 0 0/400%;
+    background: linear-gradient(65deg, #ffaa00, #fff49a, #fff49a, #ffaa00) 0 0/400%;
     color: #131417;
     transition:
             color 0.5s ease-in-out,

@@ -8,10 +8,17 @@ app.component('todos', {
      <div class="text">Solltest du ein ToDo erledigt haben, dann setz einfach ein Häkchen <img src="image/emoji.png" width="20" height="20" alt="emoji" loading="lazy"></div>
      <div style="width: 50%; margin: 0px auto;">
      <p></p>
-       <label for="username" class="custom-field three">
-     <input v-model="todoField" type="text" placeholder="Aufgabe" class="custom-file three" ref="todoInput"> <a></a>
-     <input id="datefield" v-model="dateField" @click="date()" type="date" min="" placeholder="Deadline" class="custom-file three"> <button type="button" @click="save()" class="btn primary shinny">Speichern</button>
+       <label class="custom-field three">
+         <input v-model="todoField" type="text" placeholder="&nbsp;"  ref="todoInput" required autofocus/> <a></a>
+         <span class="placeholder">Aufgabe</span>
+         <span class="border"></span>
        </label>
+       <label class="custom-field three">
+         <input id="datefield" v-model="dateField" @click="date()" type="date" min="" placeholder="Deadline" /> <a></a>
+         <span class="border"></span>
+       </label>
+       <label>
+         <button type="button" @click="save()" class="btn btn-success">Speichern</button>
        </label>
        <br>
      </div>
