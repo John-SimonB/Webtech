@@ -1,5 +1,5 @@
-import { mount } from '@vue/test-utils'
-import Dynamic from './dynamic.js';
+import {mount} from '@vue/test-utils'
+import Dynamic from './dynamicalt.js';
 
 global.axios = {
     get() { return Promise.resolve({ data: []})},

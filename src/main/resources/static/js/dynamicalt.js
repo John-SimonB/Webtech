@@ -1,63 +1,63 @@
 const app = Vue.createApp({})
 app.component('todos', {
     template: `
-     <p></p>
-     <div class="box">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-     <br>
-     <div class="text">Solltest du ein ToDo erledigt haben, dann setz einfach ein Häkchen <img src="image/emoji.png" width="20" height="20" alt="emoji" loading="lazy"></div>
-     <div style="width: 50%; margin: 0px auto;">
-     <p></p>
-       <label class="custom-field three">
-         <input v-model="todoField" type="text" placeholder="&nbsp;"  ref="todoInput" required autofocus/> <a></a>
-         <span class="placeholder"></span>
-         <span class="border"></span>
-       </label>
-       <label class="custom-field three">
-         <input id="datefield" v-model="dateField" @click="date()" type="date" min="" placeholder="Deadline" /> <a></a>
-         <span class="border"></span>
-       </label>
-       <label>
-         <button type="button" @click="save()" class="btn primary shinny">Speichern</button>
-       </label>
-       <br>
-     </div>
-     </div>
-     <br>
-     <br>
-     <br>
-     <br>
-     <div class="box">
-     <p></p>
-     <table class="table">
-         <thead class="thead-dark">
-         <tr>
-           <th></th>
-             <th>Aufgabe</th>
-             <th>Deadline</th>
-            <th></th>
-         </tr>
-         </thead>
-             <tbody>   
-            <tr v-if="items.length === 0">
-                <td></td>
-                <td colspan="2" style="text-align:center">Es gibt gute Nachrichten! du hast keine Todos</td>
-                 <td></td>
-             </tr>
-            <tr v-for="todo in items">
-              <td><label class="custom-checkbox" tab-index="0" aria-label="Checkbox Label">
-                <input type="checkbox" checked>
-                <span class="checkmark"></span>
-                <span class="label"></span>
-              </label></td>
-              <td><span class="label">{{todo.task}}</span></td>
-              <td><span class="label">{{todo.deadline}}</span></td>
-              <td><button class="btntrash" @click="deletetodo(todo.id)"><i class="fa fa-trash"></i></button></td>
-            </tr>
-         </tbody>
-         </table>
-         </div>
- `,
+      <p></p>
+      <div class="box">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <br>
+      <div class="text">Solltest du ein ToDo erledigt haben, dann setz einfach ein Häkchen <img src="image/emoji.png" width="20" height="20" alt="emoji" loading="lazy"></div>
+      <div style="width: 50%; margin: 0px auto;">
+        <p></p>
+        <label class="custom-field three">
+          <input v-model="todoField" type="text" placeholder="&nbsp;"  ref="todoInput" required autofocus/> <a></a>
+          <span class="placeholder"></span>
+          <span class="border"></span>
+        </label>
+        <label class="custom-field three">
+          <input id="datefield" v-model="dateField" @click="date()" type="date" min="" placeholder="Deadline" /> <a></a>
+          <span class="border"></span>
+        </label>
+        <label>
+          <button type="button" @click="save()" class="btn primary shinny">Speichern</button>
+        </label>
+        <br>
+      </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="box">
+      <p></p>
+      <table class="table">
+        <thead class="thead-dark">
+        <tr>
+          <th></th>
+          <th>Aufgabe</th>
+          <th>Deadline</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr v-if="items.length === 0">
+          <td></td>
+          <td colspan="2" style="text-align:center">Es gibt gute Nachrichten! du hast keine Todos</td>
+          <td></td>
+        </tr>
+        <tr v-for="todo in items">
+          <td><label class="custom-checkbox" tab-index="0" aria-label="Checkbox Label">
+            <input type="checkbox" checked>
+            <span class="checkmark"></span>
+            <span class="label"></span>
+          </label></td>
+          <td><span class="label">{{todo.task}}</span></td>
+          <td><span class="label">{{todo.deadline}}</span></td>
+          <td><button class="btntrash" @click="deletetodo(todo.id)"><i class="fa fa-trash"></i></button></td>
+        </tr>
+        </tbody>
+      </table>
+      </div>
+    `,
     data() {
         return {
             items: [],
