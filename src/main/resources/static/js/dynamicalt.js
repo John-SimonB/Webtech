@@ -10,8 +10,8 @@ app.component('todos', {
      <p></p>
        <label for="username" class="custom-field three">
      <input v-model="todoField" type="text" placeholder="Aufgabe" class="custom-file three" ref="todoInput"> <a></a>
-     <input id="datefield" v-model="dateField" @click="date()" type="date" min="" placeholder="Deadline" class="custom-file three"> <a></a>
-     <button type="button" @click="save()" class="btn btn-success">Speichern</button>
+     <input id="datefield" v-model="dateField" @click="date()" type="date" min="" placeholder="Deadline" class="custom-file three"> <button type="button" @click="save()" class="btn primary shinny">Speichern</button>
+       </label>
        </label>
        <br>
      </div>

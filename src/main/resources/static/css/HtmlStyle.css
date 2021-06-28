@@ -149,53 +149,6 @@ body {
     opacity: 0;
 }
 
-/* ONE */
-.custom-field.one input {
-    background: none;
-    border: 2px solid #ddd;
-    transition: border-color 0.3s ease;
-}
-
-.custom-field.one input + .placeholder {
-    left: 8px;
-    padding: 0 5px;
-}
-
-.custom-field.one input.dirty,
-.custom-field.one input:not(:placeholder-shown),
-.custom-field.one input:focus {
-    border-color: #222;
-    transition-delay: 0.1s
-}
-
-.custom-field.one input.dirty + .placeholder,
-.custom-field.one input:not(:placeholder-shown) + .placeholder,
-.custom-field.one input:focus + .placeholder {
-    top: 0;
-    font-size: 10px;
-    color: #222;
-    background: #fff;
-    width: auto
-}
-
-/* TWO */
-.custom-field.two input {
-    border-radius: 0;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    background:
-            linear-gradient(90deg, #222, #222) center bottom/0 0.15em no-repeat,
-            linear-gradient(90deg, #ccc, #ccc) left bottom/100% 0.15em no-repeat,
-            linear-gradient(90deg, #fafafa, #fafafa) left bottom/100% no-repeat;
-    transition: background-size 0.3s ease;
-}
-
-.custom-field.two input.dirty,
-.custom-field.two input:not(:placeholder-shown),
-.custom-field.two input:focus {
-    background-size: 100% 0.15em, 100% 0.1em, 100%;
-}
-
 /* THREE */
 .custom-field.three {
     --draw-duration: 0.1s;
@@ -273,4 +226,39 @@ body {
             calc(var(--draw-duration) * 2),
             calc(var(--draw-duration) * 3),
             calc(var(--draw-duration) * 2);
+}
+
+button {
+    appearance: none;
+    mz-appearance: none;
+    moz-appearance: none;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn {
+    margin: 15px 0;
+    padding: 12px 20px;
+    background: #eee;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    line-height: 100%;
+    border-radius: 3px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.btn.shinny {
+    background: linear-gradient(65deg, #cbcb72, #c1c1ad, #c2c29c, #c7c76d) 0 0/400%;
+    color: #131417;
+    transition:
+            color 0.5s ease-in-out,
+            background-position 0.5s ease-in-out;
+}
+
+.btn.shinny:hover {
+    background-position: 100% 0;
+    color: #050505;
 }
