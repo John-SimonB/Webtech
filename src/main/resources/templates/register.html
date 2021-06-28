@@ -57,11 +57,13 @@
                 } else {
                     x.type = "password";
                 }
+
+
             }
         </script>
         <p></p>
                 <button id="save" name="save" class="btn btn-success">Registrieren</button>
-                <a class="btn btn-warning" th:action="@{/login}" th:href="@{/login}" th:classappend="${#request.requestURI == '/login' ? 'active':''}">Login</a>
+                <a class="btn btn-warning" th:action="@{/registrationSuccessful}" th:href="@{/registrationSuccessful}" th:classappend="${#request.requestURI == '/registration_process' ? 'active':''}">Login</a>
 
 
     </fieldset>
