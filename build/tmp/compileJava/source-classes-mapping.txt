@@ -18,9 +18,9 @@ htw/berlin/WebtechProjekt/Services/ToDoListService.java
  htw.berlin.WebtechProjekt.Services.ToDoListService
 htw/berlin/WebtechProjekt/Controller/ToDoController.java
  htw.berlin.WebtechProjekt.Controller.ToDoController
-htw/berlin/WebtechProjekt/Services/Runner.java
- htw.berlin.WebtechProjekt.Services.Runner
+htw/berlin/WebtechProjekt/Controller/Security/WebSecurityConfig.java
+ htw.berlin.WebtechProjekt.Controller.Security.WebSecurityConfig
 htw/berlin/WebtechProjekt/Controller/ToDoRestController.java
  htw.berlin.WebtechProjekt.Controller.ToDoRestController
-htw/berlin/WebtechProjekt/Controller/WebSecurityConfig.java
- htw.berlin.WebtechProjekt.Controller.WebSecurityConfig
+htw/berlin/WebtechProjekt/Models/Runner.java
+ htw.berlin.WebtechProjekt.Models.Runner
