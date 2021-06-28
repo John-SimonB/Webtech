@@ -8,8 +8,6 @@ Falls dies zu wenig sein sollte, haben wir uns überlegt einen Kalender hinzuzuf
 (Dieser wäre nur zur Veranschaulichung und nicht zum Bearbeiten gedacht).
 # Erklärung der Website:
 
-Die Website ist abrufbar über folgenden Link: http://todolistwebtech.herokuapp.com/
-
 Willkommen auf unserer ToDoList-Website! Logge dich als Nutzer ein oder registriere dich als neuer Nutzer über unsere Registrierungsseite. 
 Nachdem du als Nutzer eingeloggt bist, kannst du dir über den "ToDo"-Reiter deine ganz persönliche ToDo-Liste anzeigen lassen. 
 Hier kannst du neue ToDo's erstellen, indem du einen Namen und eine Deadline für dein neues ToDo einträgst. Sollten dir deine erstellten ToDo's 
@@ -18,3 +16,8 @@ kannst du es ganz einfach abhaken. Jedes erledigte ToDo wird dir in Form eines C
 wie viele ToDo's du schon erledigt hast! Über den Reiter "Benutzer Liste" kannst du dir die Nutzer der ToDo-Liste anschauen.
 Über den Logout-Button kannst du dich nach der bearbeitung deiner ToDo-Liste ausloggen.
 Viel Spaß bei der bearbeitung deiner ganz eignenen ToDo-Liste! :)
+
+# Info: 
+
+Die Website ist abrufbar über folgenden Link: http://todolistwebtech.herokuapp.com/
+Die Seite BITTE nur über Mozilla Firefox oder Safari öffnen, ansonsten funktioniert unser DateInput nicht richtig, danke! :)
