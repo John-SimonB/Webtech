@@ -26,8 +26,8 @@ public class ToDoListService {
         return todos;
     }
 
-    public void addToDo(String task, /*Boolean state, */LocalDate date, String owner) {
-        ToDoListEntity newToDo = new ToDoListEntity(task, /*state, */date, owner);
+    public void addToDo(String task, LocalDate date, String owner) {
+        ToDoListEntity newToDo = new ToDoListEntity(task, date, owner);
         ToDoRepo.save(newToDo);
     }
 

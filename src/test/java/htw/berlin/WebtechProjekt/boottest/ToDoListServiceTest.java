@@ -30,7 +30,7 @@ public class ToDoListServiceTest {
     void testFindToDoByOwnerEmail(){
         var td1 = new ToDoListEntity("Hausaufgabe", LocalDate.of(2021, 06, 24), "magdamnich@web.de");
         //td1.setOwner("magdamnich@web.de");
-        var td2 = new ToDoListEntity("Abwasch", LocalDate.of(2021, 06,23), "John@gmail.com");
+        var td2 = new ToDoListEntity("Abwasch",  LocalDate.of(2021, 06,23), "John@gmail.com");
         doReturn(List.of(td1, td2)).when(repository).findAll();
 
         List<ToDoListEntity> testToDos = systemUnderTest.findAll("magdamnich@web.de");
