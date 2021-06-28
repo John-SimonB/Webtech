@@ -17,12 +17,16 @@
     <form class="form-signin" method="post" action="/login">
         <h2 class="form-signin-heading"></h2>
         <p>
-            <label for="username" class="sr-only">E-Mail Adresse</label>
-            <input type="text" id="username" name="email" class="form-control"  placeholder="E-Mail" required autofocus>
-        </p>
-        <p>
-            <label class="sr-only">Passwort</label>
-            <input type="password" id="myInput" name="password" class="form-control"  placeholder="Passwort" required>
+            <label for="username" class="custom-field three">
+                <input type="text" id="username" name="email" placeholder="&nbsp;" required autofocus/>
+                <span class="placeholder">E-Mail Adresse</span>
+                <span class="border"></span>
+            </label>
+            <label for="username" class="custom-field three">
+                <input type="password" id="myInput" name="password" placeholder="&nbsp;"/>
+                <span class="placeholder">Passwort</span>
+                <span class="border"></span>
+            </label>
         </p>
         <input type="checkbox" onclick="myFunction()"> Passwort anzeigen
         <p></p>

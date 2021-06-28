@@ -6,6 +6,7 @@
     <title>Willkommen!</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta id="Viewport" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no, shrink-to-fit=no" />
+  <script type="module" src="#" th:src="@{/js/dynamicalt.js}" defer></script>
   <link rel="stylesheet" th:href="@{/css/HtmlStyle.css}">
 </head>
 <body>
@@ -14,12 +15,8 @@
   <header class="p-3 bg-dark text-white">
     <div class="container">
       <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-          <svg class="bi me-2" width="40" height="40" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-        </a>
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <img src="image/todo.ico" width="40" height="40" alt="Bleistift" loading="lazy">
           <h2>Herzlich Willkommen auf deiner ToDo-Seite!</h2>
-        </ul>
       </div>
     </div>
   </header>

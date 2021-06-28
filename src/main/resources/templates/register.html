@@ -18,35 +18,34 @@
         <!-- Text input-->
 
         <div class="form-group">
-            <label class="col-md-4 control-label" for="fname">Vorname</label>
-                <input id="fname" name="fname" type="text" placeholder="Vorname" th:field="*{firstName}" class="form-control input-md" required
+            <label for="fname" class="custom-field three">
+                <input type="text" id="fname" name="email" placeholder="&nbsp;" th:field="*{firstName}" required
                        minlength="3" maxlength="20">
+                <span class="placeholder">Vorname</span>
+                <span class="border"></span>
+            </label>
+            <label for="fname" class="custom-field three">
+                <input type="text" id="lname" name="lname" placeholder="&nbsp;" th:field="*{lastName}" required
+                       minlength="3" maxlength="20">
+                <span class="placeholder">Nachname</span>
+                <span class="border"></span>
+            </label>
         </div>
 
-        <p></p>
         <!-- Text input-->
         <div class="form-group">
-            <label class="col-md-4 control-label" for="lname">Nachname</label>
-                <input id="lname" name="lname" type="text" placeholder="Nachname" class="form-control input-md" th:field="*{lastName}" required
-                       minlength="3" maxlength="20">
-
-        </div>
-
-        <p></p>
-        <!-- Text input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label" for="email">E-Mail Adresse</label>
-                <input id="email" name="email" type="email" placeholder="E-Mail" class="form-control input-md" th:field="*{email}" required
+            <label for="fname" class="custom-field three">
+                <input type="text" id="email" name="email" placeholder="&nbsp;" th:field="*{email}" required
                        minlength="6" maxlength="40">
-
-        </div>
-
-        <p></p>
-        <!-- Password input-->
-        <div class="form-group">
-            <label class="col-md-4 control-label">Passwort</label>
-                <input id="myInput" name="password" type="password" placeholder="Passwort" class="form-control input-md" th:field="*{password}" required
-                 minlength="6" maxlength="10" >
+                <span class="placeholder">E-Mail Adresse</span>
+                <span class="border"></span>
+            </label>
+            <label for="fname" class="custom-field three">
+                <input type="password" id="myInput" name="password" placeholder="&nbsp;" th:field="*{password}" required
+                       minlength="6" maxlength="10" >
+                <span class="placeholder">Passwort</span>
+                <span class="border"></span>
+            </label>
             <p></p>
             <input type="checkbox" onclick="myFunction()"> Passwort anzeigen
         </div>
@@ -61,7 +60,6 @@
             }
         </script>
         <p></p>
-        <!-- Button (Double) -->
                 <button id="save" name="save" class="btn btn-success">Registrieren</button>
                 <a class="btn btn-warning" th:action="@{/login}" th:href="@{/login}" th:classappend="${#request.requestURI == '/login' ? 'active':''}">Login</a>
 
