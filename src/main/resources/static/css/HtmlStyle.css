@@ -1,8 +1,8 @@
 .btntrash {
-    background-color: rgb(221, 223, 218);    border: none;
+    background-color: rgba(221, 223, 218, 0);    border: none;
     color: red;
     padding: 10px 10px;
-    font-size: 17px;
+    font-size: 20px;
     cursor: pointer;
     align-content: center;
 }
@@ -78,10 +78,6 @@ body {
 
 }
 
-.checkedLabel {
-    color: black;
-    text-decoration: line-through!important;
-}
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -104,7 +100,7 @@ body {
     background: #f2f2f2;
     padding: var(--field-padding);
     border-radius: 3px;
-    width: 250px;
+    width: 230px;
     outline: none;
     font-size: 14px;
 }
@@ -149,7 +145,6 @@ body {
     opacity: 0;
 }
 
-/* THREE */
 .custom-field.three {
     --draw-duration: 0.1s;
     --draw-color: #222;
@@ -228,16 +223,6 @@ body {
             calc(var(--draw-duration) * 2);
 }
 
-button {
-    appearance: none;
-    mz-appearance: none;
-    moz-appearance: none;
-    border: none;
-    background: none;
-    outline: none;
-    cursor: pointer;
-}
-
 .btn {
     margin: 15px 0;
     padding: 12px 20px;
@@ -262,3 +247,42 @@ button {
     background-position: 100% 0;
     color: #050505;
 }
+
+
+
+.custom-checkbox {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.custom-checkbox .label {
+    font-size: 1.2em;
+    margin: 0 10px;
+    color: black;
+}
+
+.custom-checkbox .checkmark {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #222;
+    display: inline-block;
+    border-radius: 3px;
+    background: #222 url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/White_check.svg/1200px-White_check.svg.png) center/1250% no-repeat;
+    transition: background-size 0.2s ease;
+}
+
+.custom-checkbox input:checked + .checkmark {
+    background-size: 60%;
+    transition: background-size 0.25s cubic-bezier(0.7, 0, 0.18, 1.24);
+}
+
+.custom-checkbox input {
+    display: none;
+}
+
+.table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+

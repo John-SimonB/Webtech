@@ -10,7 +10,7 @@ app.component('todos', {
      <p></p>
        <label class="custom-field three">
          <input v-model="todoField" type="text" placeholder="&nbsp;"  ref="todoInput" required autofocus/> <a></a>
-         <span class="placeholder">Aufgabe</span>
+         <span class="placeholder"></span>
          <span class="border"></span>
        </label>
        <label class="custom-field three">
@@ -18,7 +18,7 @@ app.component('todos', {
          <span class="border"></span>
        </label>
        <label>
-         <button type="button" @click="save()" class="btn btn-success">Speichern</button>
+         <button type="button" @click="save()" class="btn primary shinny">Speichern</button>
        </label>
        <br>
      </div>
@@ -28,7 +28,6 @@ app.component('todos', {
      <br>
      <br>
      <div class="box">
-     <div class="text">Du hast schon {{count}} Todos Erledigt!</div>
      <p></p>
      <table class="table">
          <thead class="thead-dark">
@@ -46,9 +45,13 @@ app.component('todos', {
                  <td></td>
              </tr>
             <tr v-for="todo in items">
-              <td><input id="strikeout" type="checkbox" @click="checkboxclick()" class="checkedBox"/></td>
-              <td id="checkbox" class="">{{todo.task}}</td>
-              <td id="checkbox1" class="">{{todo.deadline}}</td>
+              <td><label class="custom-checkbox" tab-index="0" aria-label="Checkbox Label">
+                <input type="checkbox" checked>
+                <span class="checkmark"></span>
+                <span class="label"></span>
+              </label></td>
+              <td><span class="label">{{todo.task}}</span></td>
+              <td><span class="label">{{todo.deadline}}</span></td>
               <td><button class="btntrash" @click="deletetodo(todo.id)"><i class="fa fa-trash"></i></button></td>
             </tr>
          </tbody>
